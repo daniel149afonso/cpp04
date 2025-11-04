@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:42:18 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/04 18:11:06 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/05 00:16:19 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Animal
 		std::string _type;
 	public:
 		Animal();
-		Animal(const std::string name);
 		Animal(const Animal& other);
 		Animal& operator=(const Animal& other);
 		virtual ~Animal();

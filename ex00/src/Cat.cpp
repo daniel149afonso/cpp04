@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 18:10:09 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/05 00:15:18 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/05 00:18:46 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
-Dog::Dog()
+Cat::Cat()
 {
-	_type = "Dog";
+	_type = "Cat";
 	std::cout << "Default constructor called"<<std::endl;
 }
 
-Dog::Dog(const Dog& other)
+Cat::Cat(const Cat& other)
 {
 	_type = other._type;
 	std::cout << "Copy constructor called" << std::endl;
 }
 
-Dog& Dog::operator=(const Dog &other)
+Cat& Cat::operator=(const Cat &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 
@@ -33,12 +33,12 @@ Dog& Dog::operator=(const Dog &other)
 	return (*this);
 }
 
-Dog::~Dog()
+Cat::~Cat()
 {
 	std::cout << "Destructor called"<<std::endl;
 }
 
-void Dog::makeSound() const
+void Cat::makeSound() const
 {
 	
 }
