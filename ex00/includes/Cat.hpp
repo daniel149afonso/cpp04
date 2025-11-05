@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:42:20 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/04 18:03:22 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/05 16:05:34 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 class Cat: public Animal
 {
 	public:
+		Cat();
+		Cat(const Cat& other);
+		Cat &operator=(const Cat &other);
+		~Cat();
 	void makeSound() const;
 };
 #endif
