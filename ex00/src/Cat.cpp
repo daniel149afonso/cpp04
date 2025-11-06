@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
+/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 18:10:09 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/05 16:09:58 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/06 17:35:53 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ Cat::~Cat()
 
 void Cat::makeSound() const
 {
-	std::cout << "Miaou miaou!"<<std::endl;
+	std::cout << "Cat: Miaou miaou!"<<std::endl;
 }

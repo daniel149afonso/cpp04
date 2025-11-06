@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
+/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 18:10:09 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/05 16:10:03 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/06 17:22:53 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ Dog::~Dog()
 
 void Dog::makeSound() const
 {
-	std::cout << "Wouf wouf!"<<std::endl;
+	std::cout << "Dog: Wouf wouf!"<<std::endl;
 }
