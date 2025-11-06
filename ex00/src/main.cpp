@@ -6,7 +6,7 @@
 /*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:36:51 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/06 17:41:59 by daafonso         ###   ########.fr       */
+/*   Updated: 2025/11/06 17:46:33 by daafonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,18 @@ int main()
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
-
+	std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	delete meta;
 	delete j;
 	delete i;
-	std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
-
 
 	std::cout << "\n\n### TESTING WRONG ANIMAL ###\n\n" << std::endl;
 	std::cout << "\033[34mConstructing\033[0m" << std::endl;
 	const WrongAnimal*a = new WrongCat();
 	std::cout << a->getType() << " " << std::endl;
 	a->makeSound();
-	delete a;
 	std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
+	delete a;
+
 	return (0);
 }
