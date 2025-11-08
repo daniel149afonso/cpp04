@@ -1,46 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 18:10:09 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/07 19:57:05 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/05 00:17:59 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Dog.hpp"
+#include "../includes/Brain.hpp"
 
-Dog::Dog(): Animal()
+Brain::Brain()
 {
-	_type = "Dog";
-	//_brain = new Brain();
-	std::cout << "Dog Default constructor called"<<std::endl;
+	_type = "Brain";
+	std::cout << "Brain Default constructor called"<<std::endl;
 }
 
-Dog::Dog(const Dog& other): Animal(other)
+Brain::Brain(const Brain& other)
 {
 	_type = other._type;
-	std::cout << "Dog Copy constructor called" << std::endl;
+	std::cout << "Brain Copy constructor called" << std::endl;
 }
 
-Dog& Dog::operator=(const Dog &other)
+Brain& Brain::operator=(const Brain &other)
 {
-	std::cout << "Dog Copy assignment operator called" << std::endl;
+	std::cout << "Brain Copy assignment operator called" << std::endl;
 
 	if (this == &other)
 		_type = other._type;
 	return (*this);
 }
 
-Dog::~Dog()
+Brain::~Brain()
 {
-	//delete _brain;
-	std::cout << "Dog Destructor called"<<std::endl;
+	std::cout << "Brain Destructor called"<<std::endl;
 }
 
-void Dog::makeSound() const
+void Brain::makeSound() const
 {
-	std::cout << "Dog: Wouf wouf!"<<std::endl;
+	std::cout << "Unknown cry!"<<std::endl;
+}
+
+std::string Brain::getType() const
+{
+	return(_type);
 }
