@@ -24,11 +24,11 @@ Animal::Animal(const Animal& other)
 	std::cout << "Animal Copy constructor called" << std::endl;
 }
 
-Animal& Animal::operator=(const Animal &other)
+Animal& Animal::operator=(const Animal& other)
 {
 	std::cout << "Animal Copy assignment operator called" << std::endl;
 
-	if (this == &other)
+	if (this != &other)
 		_type = other._type;
 	return (*this);
 }

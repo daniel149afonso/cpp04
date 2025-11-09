@@ -24,11 +24,11 @@ WrongCat::WrongCat(const WrongCat& other): WrongAnimal(other)
 	std::cout << "Wrong Cat Copy constructor called" << std::endl;
 }
 
-WrongCat& WrongCat::operator=(const WrongCat &other)
+WrongCat& WrongCat::operator=(const WrongCat& other)
 {
 	std::cout << "Wrong Cat Copy assignment operator called" << std::endl;
 
-	if (this == &other)
+	if (this != &other)
 		_type = other._type;
 	return (*this);
 }

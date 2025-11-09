@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:36:51 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/07 20:29:46 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/09 02:10:06 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "../includes/Dog.hpp"
 #include "../includes/WrongAnimal.hpp"
 #include "../includes/WrongCat.hpp"
+#include "../includes/Brain.hpp"
 
 int main()
 {
@@ -22,6 +23,8 @@ int main()
 	const Animal* i = new Cat();
 	int len = 8;
 	Animal *animals[len];
+	Brain brain;
+	std::cout << brain._ideas->size() << "\n";
 	for (int i = 0; i < len; i++)
 	{
 		if (i < (len / 2))

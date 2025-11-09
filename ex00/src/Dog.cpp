@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 18:10:09 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/06 17:22:53 by daafonso         ###   ########.fr       */
+/*   Updated: 2025/11/08 14:25:14 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Dog& Dog::operator=(const Dog &other)
 {
 	std::cout << "Dog Copy assignment operator called" << std::endl;
 
-	if (this == &other)
+	if (this != &other)
 		_type = other._type;
 	return (*this);
 }

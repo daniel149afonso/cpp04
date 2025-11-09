@@ -14,22 +14,31 @@
 
 Brain::Brain()
 {
-	_type = "Brain";
+	for (int i = 0; i < 100; i++)
+	{
+		this->_ideas[i] = "Thinking about chicken...";
+	}
+	
 	std::cout << "Brain Default constructor called"<<std::endl;
 }
 
 Brain::Brain(const Brain& other)
 {
-	_type = other._type;
+	*this = other;
 	std::cout << "Brain Copy constructor called" << std::endl;
 }
 
-Brain& Brain::operator=(const Brain &other)
+Brain& Brain::operator=(const Brain& other)
 {
 	std::cout << "Brain Copy assignment operator called" << std::endl;
 
-	if (this == &other)
-		_type = other._type;
+	if (this != &other)
+	{
+		for (int i = 0; i < 100; i++)
+		{
+			this->_ideas[i] = other._ideas[i];
+		}
+	}
 	return (*this);
 }
 
@@ -38,12 +47,10 @@ Brain::~Brain()
 	std::cout << "Brain Destructor called"<<std::endl;
 }
 
-void Brain::makeSound() const
+std::string Brain::getIdeas(const int index) const
 {
-	std::cout << "Unknown cry!"<<std::endl;
-}
-
-std::string Brain::getType() const
-{
-	return(_type);
+	if (index >= 0 && index < (int)this->_ideas->size())
+		return(this->_ideas[index]);
+	std::cout << "Not a valid index passed"<<std::endl;
+	return (NULL);
 }
