@@ -14,11 +14,13 @@
 
 Brain::Brain()
 {
+	int size = 0;
 	for (int i = 0; i < 100; i++)
 	{
 		this->_ideas[i] = "Thinking about chicken...";
+		size++;
 	}
-	
+	_nbIdeas = size;
 	std::cout << "Brain Default constructor called"<<std::endl;
 }
 
