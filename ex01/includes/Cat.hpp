@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:42:20 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/07 15:27:09 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/10 15:22:25 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@ class Cat: public Animal
 		Cat(const Cat& other);
 		Cat &operator=(const Cat &other);
 		~Cat();
-	void makeSound() const;
+
+		//Public methods
+		void makeSound() const;
+
+		//Getters Setters
+		std::string getBrainIdeas(const int index) const;
+		void setBrainIdeas(int index, const std::string idea);
 };
 #endif

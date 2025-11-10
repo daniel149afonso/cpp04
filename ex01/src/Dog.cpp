@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 18:10:09 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/08 14:26:25 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/10 14:38:24 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Dog::Dog(): Animal()
 {
 	_type = "Dog";
-	//_brain = new Brain();
+	_brain = new Brain();
 	std::cout << "Dog Default constructor called"<<std::endl;
 }
 
@@ -36,7 +36,7 @@ Dog& Dog::operator=(const Dog& other)
 
 Dog::~Dog()
 {
-	//delete _brain;
+	delete _brain;
 	std::cout << "Dog Destructor called"<<std::endl;
 }
 

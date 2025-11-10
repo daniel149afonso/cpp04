@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:42:23 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/07 15:27:06 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/10 15:17:32 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ class Dog : public Animal
 		Dog &operator=(const Dog &other);
 		~Dog();
 		void makeSound() const;
+		
 };
 #endif

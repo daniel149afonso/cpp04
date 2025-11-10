@@ -51,8 +51,18 @@ Brain::~Brain()
 
 std::string Brain::getIdeas(const int index) const
 {
-	if (index >= 0 && index < (int)this->_ideas->size())
+	if (index >= 0 && index < _nbIdeas)
 		return(this->_ideas[index]);
 	std::cout << "Not a valid index passed"<<std::endl;
 	return (NULL);
+}
+
+void Brain::setIdeas(int index, const std::string idea)
+{
+	if (index >= 0 && index < _nbIdeas)
+	{
+		this->_ideas[index] = idea;
+		return ;
+	}
+	std::cout << "Not a valid index passed"<<std::endl;
 }
