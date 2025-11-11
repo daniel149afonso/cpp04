@@ -25,6 +25,7 @@ class Brain
 		Brain& operator=(const Brain& other);
 		~Brain();
 
+		//Getter Setter
 		std::string getIdeas(const int index) const;
 		void setIdeas(int index, const std::string);
 };

@@ -6,7 +6,7 @@
 /*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 18:10:09 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/10 14:38:24 by daniel149af      ###   ########.fr       */
+/*   Updated: 2025/11/11 03:01:13 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,22 @@ Dog::Dog(): Animal()
 
 Dog::Dog(const Dog& other): Animal(other)
 {
-	_type = other._type;
+	_brain = new Brain();
+	*this = other;
 	std::cout << "Dog Copy constructor called" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& other)
 {
-	std::cout << "Dog Copy assignment operator called" << std::endl;
-
 	if (this != &other)
+	{
 		_type = other._type;
+		if (_brain)
+			delete _brain;
+		_brain = new Brain(*other._brain);
+		//std::cout << &_brain << " " << &other._brain << std::endl; // Debug different adresses
+	}
+	std::cout << "Dog Copy assignment operator called" << std::endl;
 	return (*this);
 }
 
@@ -43,4 +49,14 @@ Dog::~Dog()
 void Dog::makeSound() const
 {
 	std::cout << "Dog: Wouf wouf!"<<std::endl;
+}
+
+std::string Dog::getBrainIdeas(const int index) const
+{
+	return (this->_brain->getIdeas(index));
+}
+
+void Dog::setBrainIdeas(int index, const std::string idea)
+{
+	this->_brain->setIdeas(index, idea);
 }

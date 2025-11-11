@@ -36,6 +36,7 @@ Brain& Brain::operator=(const Brain& other)
 
 	if (this != &other)
 	{
+		_nbIdeas = other._nbIdeas;
 		for (int i = 0; i < 100; i++)
 		{
 			this->_ideas[i] = other._ideas[i];
@@ -54,7 +55,7 @@ std::string Brain::getIdeas(const int index) const
 	if (index >= 0 && index < _nbIdeas)
 		return(this->_ideas[index]);
 	std::cout << "Not a valid index passed"<<std::endl;
-	return (NULL);
+	return ("");
 }
 
 void Brain::setIdeas(int index, const std::string idea)
