@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daafonso <daafonso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: daniel149afonso <daniel149afonso@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:36:51 by daniel149af       #+#    #+#             */
-/*   Updated: 2025/11/06 17:46:33 by daafonso         ###   ########.fr       */
+/*   Updated: 2025/11/13 16:32:54 by daniel149af      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "../includes/WrongAnimal.hpp"
 #include "../includes/WrongCat.hpp"
 
-int main()
+void test_animal()
 {
 	std::cout << "\n\n### TESTING ANIMAL ###\n\n" << std::endl;
 	std::cout << "\033[34mConstructing\033[0m" << std::endl;
@@ -33,7 +33,10 @@ int main()
 	delete meta;
 	delete j;
 	delete i;
+}
 
+void test_wrong_animal()
+{
 	std::cout << "\n\n### TESTING WRONG ANIMAL ###\n\n" << std::endl;
 	std::cout << "\033[34mConstructing\033[0m" << std::endl;
 	const WrongAnimal*a = new WrongCat();
@@ -41,6 +44,11 @@ int main()
 	a->makeSound();
 	std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	delete a;
+}
 
+int main()
+{
+	test_animal();
+	test_wrong_animal();
 	return (0);
 }
